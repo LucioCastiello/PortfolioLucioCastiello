@@ -3,46 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Lucio Castiello</title>
+    <title>Portfolio de Lucio Castiello | Desarrollador</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Simple -->
+    <!-- Header -->
     <header>
         <div class="container">
-            <h1>Lucio Castiello</h1>
+            <div class="logo">LC</div>
             <nav>
                 <a href="#sobre-mi">Sobre Mí</a>
                 <a href="#proyectos">Proyectos</a>
                 <a href="#habilidades">Habilidades</a>
+                <a href="#experiencia">Experiencia</a>
                 <a href="#contacto">Contacto</a>
             </nav>
         </div>
     </header>
 
-    <!-- Intro -->
-    <div class="intro">
+    <!-- Hero Section -->
+    <section id="hero">
         <div class="container">
-            <h2>¡Hola! Soy Lucio</h2>
-            <p>Bienvenido a mi portfolio personal</p>
+            <div class="hero-content">
+                <h1>Lucio Castiello</h1>
+                <h2>Desarrollador Full Stack</h2>
+                <p>Especializado en crear soluciones digitales eficientes y escalables</p>
+                <div class="hero-cta">
+                    <a href="#proyectos" class="btn primary">Ver Proyectos</a>
+                    <a href="#contacto" class="btn secondary">Contactar</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Sobre Mí Section -->
     <section id="sobre-mi">
         <div class="container">
-            <h2>Sobre Mí</h2>
+            <div class="section-header">
+                <h2>Sobre Mí</h2>
+                <div class="separator"></div>
+            </div>
             <div class="about-content">
-                <img src="placeholder-profile.jpg" alt="Lucio Castiello">
-                <div>
-                    <p>¡Hola! Soy Lucio Castiello.</p>
-                    <ul>
-                        <li><span>Estudiante</span></li>
-                        <li><span>Principiante en programación</span></li>
-                        <li><span>Buenos Aires, Argentina</span></li>
-                    </ul>
+                <div class="about-image">
+                    <img src="placeholder-profile.jpg" alt="Lucio Castiello">
+                </div>
+                <div class="about-text">
+                    <p>Soy un desarrollador apasionado por crear soluciones tecnológicas que resuelvan problemas reales. Mi enfoque se centra en el desarrollo de aplicaciones web y móviles con arquitecturas robustas y escalables.</p>
+                    <p>Con experiencia en el stack MERN (MongoDB, Express, React, Node.js) y conocimientos en desarrollo backend con Java Spring Boot, me especializo en crear aplicaciones de alto rendimiento con interfaces de usuario intuitivas.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-code"></i>
+                            <span>Desarrollo Full Stack</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-database"></i>
+                            <span>Arquitectura de Datos</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Diseño Responsive</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Buenos Aires, Argentina</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -51,30 +78,66 @@
     <!-- Proyectos Section -->
     <section id="proyectos">
         <div class="container">
-            <h2>Mis Proyectos</h2>
-            <div class="projects-list">
-                <div class="project">
-                    <img src="project-placeholder.jpg" alt="Chacamion">
-                    <h3>Chacamion</h3>
-                    <div class="tags">
-                        <span>Básico</span>
-                        <span>Web</span>
+            <div class="section-header">
+                <h2>Proyectos Destacados</h2>
+                <div class="separator"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project-placeholder.jpg" alt="Chacamion">
+                    </div>
+                    <div class="project-content">
+                        <h3>Chacamion</h3>
+                        <p>Plataforma logística para conectar transportistas con clientes que necesitan servicios de transporte de carga. Implementada con React, Node.js y MongoDB.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Express</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-small"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#" class="btn-small"><i class="fab fa-github"></i> Código</a>
+                        </div>
                     </div>
                 </div>
-                <div class="project">
-                    <img src="project-placeholder.jpg" alt="Rush Ball">
-                    <h3>Rush Ball</h3>
-                    <div class="tags">
-                        <span>Juego</span>
-                        <span>Básico</span>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project-placeholder.jpg" alt="Rush Ball">
+                    </div>
+                    <div class="project-content">
+                        <h3>Rush Ball</h3>
+                        <p>Juego multijugador en tiempo real desarrollado con Unity y C#. Implementa física avanzada y sistema de matchmaking para partidas competitivas.</p>
+                        <div class="project-tech">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Photon</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-small"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#" class="btn-small"><i class="fab fa-github"></i> Código</a>
+                        </div>
                     </div>
                 </div>
-                <div class="project">
-                    <img src="project-placeholder.jpg" alt="PillAlert">
-                    <h3>PillAlert</h3>
-                    <div class="tags">
-                        <span>Salud</span>
-                        <span>Web</span>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project-placeholder.jpg" alt="PillAlert">
+                    </div>
+                    <div class="project-content">
+                        <h3>PillAlert</h3>
+                        <p>Aplicación de recordatorio de medicamentos con notificaciones programadas y seguimiento de dosis. Desarrollada con React Native y Firebase para sincronización en la nube.</p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Redux</span>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-small"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#" class="btn-small"><i class="fab fa-github"></i> Código</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,18 +147,129 @@
     <!-- Habilidades Section -->
     <section id="habilidades">
         <div class="container">
-            <h2>Mis Habilidades</h2>
+            <div class="section-header">
+                <h2>Habilidades Técnicas</h2>
+                <div class="separator"></div>
+            </div>
             <div class="skills-container">
-                <div class="skill">
-                    <h3>Desarrollo Web</h3>
-                    <div class="skill-tags">
-                        <span>Básico</span>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5/CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TypeScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill">
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Express</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Java Spring</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
                     <h3>Bases de Datos</h3>
-                    <div class="skill-tags">
-                        <span>Básico</span>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Firebase</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Section -->
+    <section id="experiencia">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experiencia Profesional</h2>
+                <div class="separator"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022 - Presente</div>
+                    <div class="timeline-content">
+                        <h3>Desarrollador Full Stack</h3>
+                        <h4>TechSolutions Argentina</h4>
+                        <p>Desarrollo de aplicaciones web empresariales utilizando React, Node.js y MongoDB. Implementación de arquitecturas escalables y optimización de rendimiento.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2020 - 2022</div>
+                    <div class="timeline-content">
+                        <h3>Desarrollador Frontend</h3>
+                        <h4>Digital Innovation Labs</h4>
+                        <p>Creación de interfaces de usuario responsivas y accesibles. Implementación de aplicaciones SPA con React y gestión de estado con Redux.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2019 - 2020</div>
+                    <div class="timeline-content">
+                        <h3>Desarrollador Junior</h3>
+                        <h4>StartUp Hub BA</h4>
+                        <p>Desarrollo de prototipos y MVPs para startups tecnológicas. Trabajo con metodologías ágiles y entrega continua.</p>
                     </div>
                 </div>
             </div>
@@ -105,16 +279,57 @@
     <!-- Contacto Section -->
     <section id="contacto">
         <div class="container">
-            <h2>Contacto</h2>
-            <div class="contact-info">
-                <p><strong>Email:</strong> lucio.castiello@example.com</p>
-                <p><strong>Teléfono:</strong> +54 11 1234 5678</p>
-                <p><strong>Ubicación:</strong> Buenos Aires, Argentina</p>
-                
-                <div class="social">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">Twitter</a>
+            <div class="section-header">
+                <h2>Contacto</h2>
+                <div class="separator"></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>lucio.castiello@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+54 11 1234 5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Ubicación</h3>
+                            <p>Buenos Aires, Argentina</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-dev"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Envíame un mensaje</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Asunto">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Enviar Mensaje</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -122,7 +337,12 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Lucio Castiello. Todos los derechos reservados.</p>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2023 Lucio Castiello. Todos los derechos reservados.</p>
+                <p>Desarrollador Full Stack | Buenos Aires, Argentina</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
