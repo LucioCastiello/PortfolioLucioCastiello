@@ -202,9 +202,25 @@ nav a:hover::after {
     max-width: 800px;
 }
 
+.hero-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+}
+
 .hero-content h1 {
     font-size: 3.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     color: white;
 }
 
