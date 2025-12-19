@@ -9,6 +9,7 @@
     --text-light: #7f8c8d;
     --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --brand-slate: #2F3E4E;
 }
 
 * {
@@ -72,7 +73,7 @@ section {
 .separator {
     width: 80px;
     height: 3px;
-    background-color: var(--primary-color);
+    background-color: var(--brand-slate);
     margin: 0 auto;
 }
 
@@ -308,6 +309,21 @@ nav a:hover::after {
     overflow: hidden;
 }
 
+.project-image.brand {
+    background: var(--brand-slate);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+}
+
+.project-image__title {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .project-image img {
     width: 100%;
     height: 100%;
@@ -485,6 +501,92 @@ nav a:hover::after {
     font-weight: 500;
 }
 
+.exp-timeline {
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.exp-axis {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--brand-slate);
+    border-radius: 2px;
+}
+
+.exp-item {
+    position: relative;
+    width: 50%;
+    padding: 30px 40px;
+    box-sizing: border-box;
+}
+
+.exp-item.left {
+    left: 0;
+}
+
+.exp-item.right {
+    left: 50%;
+}
+
+.exp-node {
+    position: absolute;
+    top: 40px;
+    width: 14px;
+    height: 14px;
+    background: var(--brand-slate);
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(47, 62, 78, 0.15);
+    right: -7px;
+}
+
+.exp-item.right .exp-node {
+    left: -7px;
+    right: auto;
+}
+
+.exp-date {
+    position: absolute;
+    top: 24px;
+    right: -120px;
+    background: var(--light-color);
+    color: var(--brand-slate);
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.exp-item.right .exp-date {
+    left: -120px;
+    right: auto;
+}
+
+.exp-card {
+    background: #e9eef3;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+}
+
+.exp-card h3 {
+    color: var(--brand-slate);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.exp-card h3 span {
+    border-bottom: 3px solid var(--brand-slate);
+}
+
+.exp-card p {
+    color: var(--text-light);
+    font-size: 0.98rem;
+}
+
 /* Contact Section */
 #contacto {
     background-color: white;
@@ -492,8 +594,8 @@ nav a:hover::after {
 
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 .contact-item {
@@ -505,7 +607,7 @@ nav a:hover::after {
 
 .contact-item i {
     font-size: 24px;
-    color: var(--primary-color);
+    color: var(--brand-slate);
 }
 
 .contact-item h3 {
@@ -532,7 +634,7 @@ nav a:hover::after {
 }
 
 .social-link:hover {
-    background-color: var(--primary-color);
+    background-color: var(--brand-slate);
     color: white;
     transform: translateY(-3px);
 }
@@ -585,41 +687,28 @@ footer {
         grid-template-columns: 1fr;
     }
     
-    .timeline-item {
+    .exp-item {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
-    
-    .timeline-item:nth-child(even) {
+    .exp-item.right {
         left: 0;
     }
-    
-    .timeline::after {
+    .exp-axis {
         left: 31px;
     }
-    
-    .timeline-dot {
-        left: 21px;
+    .exp-node {
+        left: 24px;
         right: auto;
     }
-    
-    .timeline-date {
+    .exp-date {
         position: relative;
-        width: auto;
         top: auto;
         left: auto;
         right: auto;
-        text-align: left;
-        background: none;
-        padding: 0;
+        display: inline-block;
         margin-bottom: 10px;
-    }
-    
-    .timeline-item:nth-child(odd) .timeline-date,
-    .timeline-item:nth-child(even) .timeline-date {
-        left: auto;
-        right: auto;
     }
 }
 
